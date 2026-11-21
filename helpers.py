@@ -1,0 +1,45 @@
+import sys, os
+
+match sys.platform:
+    case "win32":
+        USER_INSTALL_DIR = os.path.expanduser("~/AppData/Local/packages/")
+        USER_BIN_DIR = os.path.expanduser("~/.bin/")
+
+        SYSTEM_INSTALL_DIR = "C:/Program Files/"
+        SYSTEM_BIN_DIR = "C:/bin/"
+    case "linux":
+        USER_INSTALL_DIR = os.path.expanduser("~/.packages/")
+        USER_BIN_DIR = os.path.expanduser("~/.local/bin/")
+
+        SYSTEM_INSTALL_DIR = "/packages/"
+        SYSTEM_BIN_DIR = "/usr/local/bin/"
+    case "darwin":
+        USER_INSTALL_DIR = os.path.expanduser("~/.packages/")
+        USER_BIN_DIR = os.path.expanduser("~/.local/bin/")
+
+        SYSTEM_INSTALL_DIR = "/packages/"
+        SYSTEM_BIN_DIR = "/usr/local/bin/"
+        
+    case _:
+        raise NotImplementedError(f"Unknown OS '{sys.platform}'")
+
+def is_admin():
+    if sys.platform == "win32":
+        return bool(ctypes.windll.shell32.IsUserAnAdmin())
+    return os.geteuid() == 0
+
+def relaunch_as_admin():
+    if sys.platform == "win32":
+        # Relaunch this script through the Windows UAC prompt.
+        params = subprocess.list2cmdline(
+            [os.path.abspath(__file__), *sys.argv[1:]]
+        )
+        result = ctypes.windll.shell32.ShellExecuteW(
+            None, "runas", sys.executable, params, None, 1
+        )
+        if result <= 32:
+            raise RuntimeError("Administrator access was declined or failed.")
+        raise SystemExit(0)
+
+    print(f"Run this command with administrator privileges:\n  sudo {sys.executable} {sys.argv[0]}")
+    raise SystemExit(1)

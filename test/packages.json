@@ -1,0 +1,14 @@
+[
+    {
+        "name": "test_package",
+        "path": "/test_package.package",
+        "deps": [],
+        "description": "Just a test package"
+    },
+    {
+        "name": "another_package",
+        "path": "/another_package.package",
+        "deps": ["test_package"],
+        "description": "Just another test package."
+    }
+]
