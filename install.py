@@ -182,10 +182,15 @@ def check_installations():
     )
 
 if __name__ == "__main__":
+    print("installing user directories...")
     install()
     if len(sys.argv) > 1 and sys.argv[1] in ["--system", "-s"]:
+        print("installing system directories...")
         system_install()
     print("installing dependencies...")
-    subprocess.check_call([
-        sys.executable, "-m", "pip", "install", "-r", "requirements.txt"
-    ])
+    try:
+        import requests
+    except ImportError:
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", "-r", "requirements.txt"
+        ])

@@ -26,4 +26,5 @@ def download_package(package: Package, path: str):
         f.write(requests.get(package.url).content)
 
 packs = get_package_list()
+print(packs)
 download_package(packs[0], "pack.package")

@@ -5,5 +5,3 @@ if not check_installations[0]:
     exit()
 if not check_installations[1]:
     print("Warning: not installed for system. On posix, run sudo ./install.py, on windows, run install.py and click \"yes\"")
-
-
