@@ -1,14 +1,1266 @@
 [
     {
-        "name": "test_package",
-        "path": "/test_package.package",
+        "name": "aptdaemon-data",
+        "path": "/aptdaemon-data.package",
         "deps": [],
-        "description": "Just a test package"
+        "description": "data files for clients"
     },
     {
-        "name": "another_package",
-        "path": "/another_package.package",
-        "deps": ["test_package"],
-        "description": "Just another test package."
+        "name": "aptdaemon",
+        "path": "/aptdaemon.package",
+        "deps": [
+            "python3-aptdaemon"
+        ],
+        "description": "transaction based package management service"
+    },
+    {
+        "name": "dmz-cursor-theme",
+        "path": "/dmz-cursor-theme.package",
+        "deps": [],
+        "description": "Style neutral, scalable cursor theme"
+    },
+    {
+        "name": "gdm3",
+        "path": "/gdm3.package",
+        "deps": [
+            "gir1.2-gdm-1.0",
+            "gnome-session-bin",
+            "gnome-session-common",
+            "gnome-settings-daemon",
+            "gnome-shell",
+            "libgdm1",
+            "ubuntu-session"
+        ],
+        "description": "GNOME Display Manager"
+    },
+    {
+        "name": "geocode-glib-common",
+        "path": "/geocode-glib-common.package",
+        "deps": [],
+        "description": "icons for the geocode-glib library"
+    },
+    {
+        "name": "gir1.2-accountsservice-1.0",
+        "path": "/gir1.2-accountsservice-1.0.package",
+        "deps": [],
+        "description": "GObject introspection data for AccountService"
+    },
+    {
+        "name": "gir1.2-adw-1",
+        "path": "/gir1.2-adw-1.package",
+        "deps": [
+            "gir1.2-gtk-4.0"
+        ],
+        "description": "GObject introspection files for libadwaita"
+    },
+    {
+        "name": "gir1.2-gck-2",
+        "path": "/gir1.2-gck-2.package",
+        "deps": [
+            "libgck-2-2"
+        ],
+        "description": "GObject introspection data for the GCK library"
+    },
+    {
+        "name": "gir1.2-gcr-4",
+        "path": "/gir1.2-gcr-4.package",
+        "deps": [
+            "gir1.2-gck-2",
+            "libgcr-4-4"
+        ],
+        "description": "GObject introspection data for the GCR library"
+    },
+    {
+        "name": "gir1.2-gdesktopenums-3.0",
+        "path": "/gir1.2-gdesktopenums-3.0.package",
+        "deps": [],
+        "description": "GObject introspection for GSettings desktop-wide schemas"
+    },
+    {
+        "name": "gir1.2-gdm-1.0",
+        "path": "/gir1.2-gdm-1.0.package",
+        "deps": [
+            "libgdm1"
+        ],
+        "description": "GObject introspection data for the GNOME Display Manager"
+    },
+    {
+        "name": "gir1.2-geoclue-2.0",
+        "path": "/gir1.2-geoclue-2.0.package",
+        "deps": [],
+        "description": "convenience library to interact with geoinformation service (introspection)"
+    },
+    {
+        "name": "gir1.2-gnomeautoar-0.1",
+        "path": "/gir1.2-gnomeautoar-0.1.package",
+        "deps": [
+            "libgnome-autoar-0-0"
+        ],
+        "description": "GObject introspection data for GnomeAutoar"
+    },
+    {
+        "name": "gir1.2-gnomebg-4.0",
+        "path": "/gir1.2-gnomebg-4.0.package",
+        "deps": [
+            "gir1.2-gnomedesktop-4.0",
+            "libgnome-bg-4-2t64"
+        ],
+        "description": "Introspection data for GnomeBG (GTK 4)"
+    },
+    {
+        "name": "gir1.2-gnomebluetooth-3.0",
+        "path": "/gir1.2-gnomebluetooth-3.0.package",
+        "deps": [
+            "libgnome-bluetooth-3.0-13"
+        ],
+        "description": "Introspection data for GnomeBluetooth"
+    },
+    {
+        "name": "gir1.2-gnomedesktop-3.0",
+        "path": "/gir1.2-gnomedesktop-3.0.package",
+        "deps": [
+            "gir1.2-gdesktopenums-3.0",
+            "libgnome-desktop-3-21"
+        ],
+        "description": "Introspection data for GnomeDesktop (GTK 3)"
+    },
+    {
+        "name": "gir1.2-gnomedesktop-4.0",
+        "path": "/gir1.2-gnomedesktop-4.0.package",
+        "deps": [
+            "gir1.2-gdesktopenums-3.0",
+            "libgnome-desktop-4-2t64"
+        ],
+        "description": "Introspection data for GnomeDesktop (GTK 4)"
+    },
+    {
+        "name": "gir1.2-gnomeqr-4.0",
+        "path": "/gir1.2-gnomeqr-4.0.package",
+        "deps": [
+            "libgnome-qr-4-0"
+        ],
+        "description": "Introspection data for GnomeQR"
+    },
+    {
+        "name": "gir1.2-graphene-1.0",
+        "path": "/gir1.2-graphene-1.0.package",
+        "deps": [],
+        "description": "library of graphic data types (introspection files)"
+    },
+    {
+        "name": "gir1.2-gtk-4.0",
+        "path": "/gir1.2-gtk-4.0.package",
+        "deps": [
+            "gir1.2-graphene-1.0"
+        ],
+        "description": "GTK graphical user interface library -- gir bindings"
+    },
+    {
+        "name": "gir1.2-gweather-4.0",
+        "path": "/gir1.2-gweather-4.0.package",
+        "deps": [
+            "libgweather-4-0t64"
+        ],
+        "description": "GObject introspection data for the GWeather library"
+    },
+    {
+        "name": "gir1.2-handy-1",
+        "path": "/gir1.2-handy-1.package",
+        "deps": [
+            "libhandy-1-0"
+        ],
+        "description": "GObject introspection files for libhandy"
+    },
+    {
+        "name": "gir1.2-javascriptcoregtk-4.1",
+        "path": "/gir1.2-javascriptcoregtk-4.1.package",
+        "deps": [
+            "libjavascriptcoregtk-4.1-0"
+        ],
+        "description": "JavaScript engine library from WebKitGTK - GObject introspection data"
+    },
+    {
+        "name": "gir1.2-mutter-51",
+        "path": "/gir1.2-mutter-51.package",
+        "deps": [
+            "gir1.2-gdesktopenums-3.0",
+            "gir1.2-graphene-1.0",
+            "libmutter-51-0"
+        ],
+        "description": "GObject introspection data for Mutter"
+    },
+    {
+        "name": "gir1.2-nm-1.0",
+        "path": "/gir1.2-nm-1.0.package",
+        "deps": [],
+        "description": "GObject introspection data for the libnm library"
+    },
+    {
+        "name": "gir1.2-nma4-1.0",
+        "path": "/gir1.2-nma4-1.0.package",
+        "deps": [
+            "gir1.2-gtk-4.0",
+            "gir1.2-nm-1.0",
+            "libnma-gtk4-0"
+        ],
+        "description": "GObject introspection data for libnma-gtk4"
+    },
+    {
+        "name": "gir1.2-polkit-1.0",
+        "path": "/gir1.2-polkit-1.0.package",
+        "deps": [],
+        "description": "GObject introspection data for polkit"
+    },
+    {
+        "name": "gir1.2-snapd-2",
+        "path": "/gir1.2-snapd-2.package",
+        "deps": [],
+        "description": "Typelib file for libsnapd-glib1"
+    },
+    {
+        "name": "gir1.2-soup-3.0",
+        "path": "/gir1.2-soup-3.0.package",
+        "deps": [],
+        "description": "GObject introspection data for the libsoup HTTP library"
+    },
+    {
+        "name": "gir1.2-upowerglib-1.0",
+        "path": "/gir1.2-upowerglib-1.0.package",
+        "deps": [],
+        "description": "GObject introspection data for upower"
+    },
+    {
+        "name": "gir1.2-vte-2.91",
+        "path": "/gir1.2-vte-2.91.package",
+        "deps": [],
+        "description": "GObject introspection data for the VTE library (GTK 3 version)"
+    },
+    {
+        "name": "gir1.2-webkit2-4.1",
+        "path": "/gir1.2-webkit2-4.1.package",
+        "deps": [
+            "gir1.2-javascriptcoregtk-4.1",
+            "gir1.2-soup-3.0",
+            "libwebkit2gtk-4.1-0"
+        ],
+        "description": "Web content engine library for GTK - GObject introspection data"
+    },
+    {
+        "name": "gjs",
+        "path": "/gjs.package",
+        "deps": [
+            "libgjs0"
+        ],
+        "description": "Mozilla-based javascript bindings for the GNOME platform (cli tool)"
+    },
+    {
+        "name": "gnome-bluetooth-3-common",
+        "path": "/gnome-bluetooth-3-common.package",
+        "deps": [],
+        "description": "GNOME Bluetooth 3 common files"
+    },
+    {
+        "name": "gnome-control-center-data",
+        "path": "/gnome-control-center-data.package",
+        "deps": [],
+        "description": "configuration applets for GNOME - data files"
+    },
+    {
+        "name": "gnome-control-center",
+        "path": "/gnome-control-center.package",
+        "deps": [
+            "gnome-control-center-data",
+            "gnome-desktop3-data",
+            "gnome-online-accounts",
+            "gnome-settings-daemon",
+            "heif-gdk-pixbuf",
+            "heif-thumbnailer",
+            "language-selector-gnome",
+            "libcolord-gtk4-1t64",
+            "libgcr-4-4",
+            "libgnome-bg-4-2t64",
+            "libgnome-bluetooth-ui-3.0-13",
+            "libgnome-desktop-4-2t64",
+            "libgnome-qr-gtk-4-0",
+            "libgoa-1.0-0b",
+            "libgoa-backend-1.0-2",
+            "libgsound0t64",
+            "libgtop-2.0-11",
+            "libinsights1",
+            "libjxl-gdk-pixbuf",
+            "libmalcontent-0-0",
+            "libnma-gtk4-0",
+            "libwhoopsie-preferences0",
+            "mutter-common",
+            "tecla",
+            "webp-pixbuf-loader",
+            "whoopsie-preferences"
+        ],
+        "description": "utilities to configure the GNOME desktop"
+    },
+    {
+        "name": "gnome-desktop3-data",
+        "path": "/gnome-desktop3-data.package",
+        "deps": [],
+        "description": "Common files for GNOME desktop apps"
+    },
+    {
+        "name": "gnome-menus",
+        "path": "/gnome-menus.package",
+        "deps": [],
+        "description": "GNOME implementation of the freedesktop menu specification"
+    },
+    {
+        "name": "gnome-online-accounts",
+        "path": "/gnome-online-accounts.package",
+        "deps": [
+            "libgcr-4-4",
+            "libgoa-1.0-0b",
+            "libgoa-backend-1.0-2",
+            "librest-1.0-0"
+        ],
+        "description": "service to manage online accounts for the GNOME desktop"
+    },
+    {
+        "name": "gnome-session-bin",
+        "path": "/gnome-session-bin.package",
+        "deps": [
+            "libgnome-desktop-4-2t64"
+        ],
+        "description": "GNOME Session Manager - Minimal runtime"
+    },
+    {
+        "name": "gnome-session-canberra",
+        "path": "/gnome-session-canberra.package",
+        "deps": [
+            "libcanberra-gtk3-0"
+        ],
+        "description": "GNOME session log in and log out sound events"
+    },
+    {
+        "name": "gnome-session-common",
+        "path": "/gnome-session-common.package",
+        "deps": [],
+        "description": "GNOME Session Manager - common files"
+    },
+    {
+        "name": "gnome-settings-daemon-common",
+        "path": "/gnome-settings-daemon-common.package",
+        "deps": [],
+        "description": "daemon handling the GNOME session settings - common files"
+    },
+    {
+        "name": "gnome-settings-daemon",
+        "path": "/gnome-settings-daemon.package",
+        "deps": [
+            "gnome-settings-daemon-common",
+            "libgck-2-2",
+            "libgcr-4-4",
+            "libgeocode-glib-2-0",
+            "libgnome-desktop-4-2t64",
+            "libgweather-4-0t64"
+        ],
+        "description": "daemon handling the GNOME session settings"
+    },
+    {
+        "name": "gnome-shell-common",
+        "path": "/gnome-shell-common.package",
+        "deps": [],
+        "description": "common files for the GNOME graphical shell"
+    },
+    {
+        "name": "gnome-shell-ubuntu-extensions",
+        "path": "/gnome-shell-ubuntu-extensions.package",
+        "deps": [
+            "gir1.2-adw-1",
+            "gir1.2-gnomeautoar-0.1",
+            "gir1.2-gnomedesktop-3.0",
+            "gir1.2-gtk-4.0",
+            "gir1.2-snapd-2",
+            "gjs",
+            "gnome-shell"
+        ],
+        "description": "Ubuntu official Extensions to extend functionality of GNOME Shell"
+    },
+    {
+        "name": "gnome-shell",
+        "path": "/gnome-shell.package",
+        "deps": [
+            "gir1.2-accountsservice-1.0",
+            "gir1.2-adw-1",
+            "gir1.2-gcr-4",
+            "gir1.2-gdesktopenums-3.0",
+            "gir1.2-gdm-1.0",
+            "gir1.2-geoclue-2.0",
+            "gir1.2-gnomebg-4.0",
+            "gir1.2-gnomebluetooth-3.0",
+            "gir1.2-gnomedesktop-4.0",
+            "gir1.2-gnomeqr-4.0",
+            "gir1.2-graphene-1.0",
+            "gir1.2-gtk-4.0",
+            "gir1.2-gweather-4.0",
+            "gir1.2-mutter-51",
+            "gir1.2-nm-1.0",
+            "gir1.2-nma4-1.0",
+            "gir1.2-polkit-1.0",
+            "gir1.2-soup-3.0",
+            "gir1.2-upowerglib-1.0",
+            "gjs",
+            "gnome-control-center",
+            "gnome-settings-daemon",
+            "gnome-shell-common",
+            "libecal-2.0-3",
+            "libgcr-4-4",
+            "libgjs0",
+            "libgnome-autoar-0-0",
+            "libgnome-desktop-4-2t64",
+            "libical3t64",
+            "libmutter-51-0",
+            "tecla",
+            "ubuntu-wallpapers"
+        ],
+        "description": "graphical shell for the GNOME desktop"
+    },
+    {
+        "name": "gstreamer1.0-packagekit",
+        "path": "/gstreamer1.0-packagekit.package",
+        "deps": [],
+        "description": "GStreamer plugin to install codecs using PackageKit"
+    },
+    {
+        "name": "gstreamer1.0-plugins-base-apps",
+        "path": "/gstreamer1.0-plugins-base-apps.package",
+        "deps": [],
+        "description": "GStreamer helper programs from the \"base\" set"
+    },
+    {
+        "name": "gvfs-backends",
+        "path": "/gvfs-backends.package",
+        "deps": [
+            "gvfs",
+            "gvfs-common",
+            "gvfs-daemons",
+            "gvfs-libs",
+            "libcdio-cdda2t64",
+            "libcdio-paranoia2t64",
+            "libgoa-1.0-0b",
+            "libmsgraph-1-1"
+        ],
+        "description": "userspace virtual filesystem - backends"
+    },
+    {
+        "name": "gvfs-common",
+        "path": "/gvfs-common.package",
+        "deps": [],
+        "description": "userspace virtual filesystem - common data files"
+    },
+    {
+        "name": "gvfs-daemons",
+        "path": "/gvfs-daemons.package",
+        "deps": [
+            "gvfs-common",
+            "gvfs-libs"
+        ],
+        "description": "userspace virtual filesystem - servers"
+    },
+    {
+        "name": "gvfs-libs",
+        "path": "/gvfs-libs.package",
+        "deps": [
+            "gvfs-common",
+            "libgcr-4-4"
+        ],
+        "description": "userspace virtual filesystem - private libraries"
+    },
+    {
+        "name": "gvfs",
+        "path": "/gvfs.package",
+        "deps": [
+            "gvfs-common",
+            "gvfs-daemons",
+            "gvfs-libs"
+        ],
+        "description": "userspace virtual filesystem - GIO module"
+    },
+    {
+        "name": "heif-gdk-pixbuf",
+        "path": "/heif-gdk-pixbuf.package",
+        "deps": [],
+        "description": "HEIF and AVIF file format decoder and encoder - gdk-pixbuf loader"
+    },
+    {
+        "name": "heif-thumbnailer",
+        "path": "/heif-thumbnailer.package",
+        "deps": [],
+        "description": "HEIF and AVIF file format decoder and encoder - thumbnailer"
+    },
+    {
+        "name": "language-selector-gnome",
+        "path": "/language-selector-gnome.package",
+        "deps": [
+            "aptdaemon",
+            "python3-aptdaemon.gtk3widgets"
+        ],
+        "description": "Language selector frontend for Ubuntu"
+    },
+    {
+        "name": "libatk-adaptor",
+        "path": "/libatk-adaptor.package",
+        "deps": [],
+        "description": "AT-SPI 2 toolkit bridge"
+    },
+    {
+        "name": "libcanberra-gtk3-0",
+        "path": "/libcanberra-gtk3-0.package",
+        "deps": [],
+        "description": "GTK+ 3.0 helper for playing widget event sounds with libcanberra"
+    },
+    {
+        "name": "libcdio-cdda2t64",
+        "path": "/libcdio-cdda2t64.package",
+        "deps": [],
+        "description": "library to read and control digital audio CDs"
+    },
+    {
+        "name": "libcdio-paranoia2t64",
+        "path": "/libcdio-paranoia2t64.package",
+        "deps": [
+            "libcdio-cdda2t64"
+        ],
+        "description": "library to read digital audio CDs with error correction"
+    },
+    {
+        "name": "libcolord-gtk4-1t64",
+        "path": "/libcolord-gtk4-1t64.package",
+        "deps": [],
+        "description": "GTK4 convenience library for interacting with colord"
+    },
+    {
+        "name": "libcue2",
+        "path": "/libcue2.package",
+        "deps": [],
+        "description": "CUE Sheet Parser Library"
+    },
+    {
+        "name": "libdee-1.0-4",
+        "path": "/libdee-1.0-4.package",
+        "deps": [],
+        "description": "Model to synchronize multiple instances over DBus - shared lib"
+    },
+    {
+        "name": "libecal-2.0-3",
+        "path": "/libecal-2.0-3.package",
+        "deps": [
+            "libical3t64"
+        ],
+        "description": "Client library for evolution calendars"
+    },
+    {
+        "name": "libexempi8",
+        "path": "/libexempi8.package",
+        "deps": [],
+        "description": "library to parse XMP metadata (Library)"
+    },
+    {
+        "name": "libgck-2-2",
+        "path": "/libgck-2-2.package",
+        "deps": [],
+        "description": "Glib wrapper library for PKCS#11 - runtime"
+    },
+    {
+        "name": "libgcr-4-4",
+        "path": "/libgcr-4-4.package",
+        "deps": [
+            "libgck-2-2"
+        ],
+        "description": "Library for Crypto related tasks"
+    },
+    {
+        "name": "libgdm1",
+        "path": "/libgdm1.package",
+        "deps": [],
+        "description": "GNOME Display Manager (shared library)"
+    },
+    {
+        "name": "libgeocode-glib-2-0",
+        "path": "/libgeocode-glib-2-0.package",
+        "deps": [
+            "geocode-glib-common"
+        ],
+        "description": "geocoding and reverse geocoding GLib library using Nominatim"
+    },
+    {
+        "name": "libgexiv2-0.16-4",
+        "path": "/libgexiv2-0.16-4.package",
+        "deps": [],
+        "description": "GObject-based wrapper around the Exiv2 library"
+    },
+    {
+        "name": "libgjs0",
+        "path": "/libgjs0.package",
+        "deps": [
+            "libmozjs-140-0"
+        ],
+        "description": "Mozilla-based javascript bindings for the GNOME platform"
+    },
+    {
+        "name": "libglycin-gtk4-2-0",
+        "path": "/libglycin-gtk4-2-0.package",
+        "deps": [],
+        "description": "sandboxed image loaders for GNOME"
+    },
+    {
+        "name": "libgnome-autoar-0-0",
+        "path": "/libgnome-autoar-0-0.package",
+        "deps": [],
+        "description": "Archives integration support for GNOME"
+    },
+    {
+        "name": "libgnome-bg-4-2t64",
+        "path": "/libgnome-bg-4-2t64.package",
+        "deps": [
+            "libgnome-desktop-4-2t64"
+        ],
+        "description": "Utility library for background images - runtime files"
+    },
+    {
+        "name": "libgnome-bluetooth-3.0-13",
+        "path": "/libgnome-bluetooth-3.0-13.package",
+        "deps": [
+            "gnome-bluetooth-3-common"
+        ],
+        "description": "GNOME Bluetooth 3 support library"
+    },
+    {
+        "name": "libgnome-bluetooth-ui-3.0-13",
+        "path": "/libgnome-bluetooth-ui-3.0-13.package",
+        "deps": [
+            "libgsound0t64"
+        ],
+        "description": "GNOME Bluetooth 3 UI support library"
+    },
+    {
+        "name": "libgnome-desktop-3-21",
+        "path": "/libgnome-desktop-3-21.package",
+        "deps": [
+            "gnome-desktop3-data"
+        ],
+        "description": "Utility library for the GNOME desktop - GTK 3 version"
+    },
+    {
+        "name": "libgnome-desktop-4-2t64",
+        "path": "/libgnome-desktop-4-2t64.package",
+        "deps": [
+            "gnome-desktop3-data"
+        ],
+        "description": "Utility library for the GNOME desktop - runtime files"
+    },
+    {
+        "name": "libgnome-qr-4-0",
+        "path": "/libgnome-qr-4-0.package",
+        "deps": [],
+        "description": "Utility library for QR Codes - runtime files"
+    },
+    {
+        "name": "libgnome-qr-gtk-4-0",
+        "path": "/libgnome-qr-gtk-4-0.package",
+        "deps": [
+            "libgnome-qr-4-0"
+        ],
+        "description": "Utility library for GTK4 QR codes - runtime files"
+    },
+    {
+        "name": "libgoa-1.0-0b",
+        "path": "/libgoa-1.0-0b.package",
+        "deps": [
+            "libgoa-1.0-common"
+        ],
+        "description": "library for GNOME Online Accounts"
+    },
+    {
+        "name": "libgoa-1.0-common",
+        "path": "/libgoa-1.0-common.package",
+        "deps": [],
+        "description": "library for GNOME Online Accounts - common files"
+    },
+    {
+        "name": "libgoa-backend-1.0-2",
+        "path": "/libgoa-backend-1.0-2.package",
+        "deps": [
+            "libgcr-4-4",
+            "libgoa-1.0-0b",
+            "libgoa-1.0-common",
+            "librest-1.0-0"
+        ],
+        "description": "backend library for GNOME Online Accounts"
+    },
+    {
+        "name": "libgsf-1-114",
+        "path": "/libgsf-1-114.package",
+        "deps": [
+            "libgsf-1-common"
+        ],
+        "description": "Structured File Library - runtime version"
+    },
+    {
+        "name": "libgsf-1-common",
+        "path": "/libgsf-1-common.package",
+        "deps": [],
+        "description": "Structured File Library - common files"
+    },
+    {
+        "name": "libgsound0t64",
+        "path": "/libgsound0t64.package",
+        "deps": [],
+        "description": "small library for playing system sounds"
+    },
+    {
+        "name": "libgtop-2.0-11",
+        "path": "/libgtop-2.0-11.package",
+        "deps": [
+            "libgtop2-common"
+        ],
+        "description": "gtop system monitoring library (shared)"
+    },
+    {
+        "name": "libgtop2-common",
+        "path": "/libgtop2-common.package",
+        "deps": [],
+        "description": "gtop system monitoring library (common)"
+    },
+    {
+        "name": "libgweather-4-0t64",
+        "path": "/libgweather-4-0t64.package",
+        "deps": [
+            "libgeocode-glib-2-0",
+            "libgweather-4-common"
+        ],
+        "description": "GWeather shared library"
+    },
+    {
+        "name": "libgweather-4-common",
+        "path": "/libgweather-4-common.package",
+        "deps": [],
+        "description": "GWeather common files"
+    },
+    {
+        "name": "libgxps2t64",
+        "path": "/libgxps2t64.package",
+        "deps": [],
+        "description": "handling and rendering XPS documents (library)"
+    },
+    {
+        "name": "libhandy-1-0",
+        "path": "/libhandy-1-0.package",
+        "deps": [],
+        "description": "Library with GTK widgets for mobile phones"
+    },
+    {
+        "name": "libical3t64",
+        "path": "/libical3t64.package",
+        "deps": [],
+        "description": "iCalendar library implementation in C (runtime)"
+    },
+    {
+        "name": "libinsights1",
+        "path": "/libinsights1.package",
+        "deps": [],
+        "description": "Ubuntu metrics reporting service - shared lib"
+    },
+    {
+        "name": "libjavascriptcoregtk-4.1-0",
+        "path": "/libjavascriptcoregtk-4.1-0.package",
+        "deps": [],
+        "description": "JavaScript engine library from WebKitGTK"
+    },
+    {
+        "name": "libjavascriptcoregtk-6.0-1",
+        "path": "/libjavascriptcoregtk-6.0-1.package",
+        "deps": [],
+        "description": "JavaScript engine library from WebKitGTK"
+    },
+    {
+        "name": "libjxl-gdk-pixbuf",
+        "path": "/libjxl-gdk-pixbuf.package",
+        "deps": [],
+        "description": "JPEG XL Plugin for gdk-pixbuf"
+    },
+    {
+        "name": "libmalcontent-0-0",
+        "path": "/libmalcontent-0-0.package",
+        "deps": [
+            "libmalcontent-common"
+        ],
+        "description": "library for parental control of applications"
+    },
+    {
+        "name": "libmalcontent-common",
+        "path": "/libmalcontent-common.package",
+        "deps": [],
+        "description": "library for parental control of applications"
+    },
+    {
+        "name": "libmozjs-140-0",
+        "path": "/libmozjs-140-0.package",
+        "deps": [],
+        "description": "SpiderMonkey JavaScript library"
+    },
+    {
+        "name": "libmsgraph-1-1",
+        "path": "/libmsgraph-1-1.package",
+        "deps": [
+            "libgoa-1.0-0b"
+        ],
+        "description": "library for accessing the Microsoft Graph API"
+    },
+    {
+        "name": "libmutter-51-0",
+        "path": "/libmutter-51-0.package",
+        "deps": [
+            "libgnome-desktop-4-2t64",
+            "mutter-common",
+            "mutter-common-bin"
+        ],
+        "description": "window manager library from the Mutter window manager"
+    },
+    {
+        "name": "libnautilus-extension4",
+        "path": "/libnautilus-extension4.package",
+        "deps": [],
+        "description": "libraries for nautilus components - runtime version"
+    },
+    {
+        "name": "libnma-common",
+        "path": "/libnma-common.package",
+        "deps": [],
+        "description": "NetworkManager GUI library - translations"
+    },
+    {
+        "name": "libnma-gtk4-0",
+        "path": "/libnma-gtk4-0.package",
+        "deps": [
+            "libgck-2-2",
+            "libgcr-4-4",
+            "libnma-common"
+        ],
+        "description": "NetworkManager GUI GTK4 library"
+    },
+    {
+        "name": "libportal-gtk4-1",
+        "path": "/libportal-gtk4-1.package",
+        "deps": [],
+        "description": "Flatpak portal library for GTK 4 GUIs"
+    },
+    {
+        "name": "libportal1",
+        "path": "/libportal1.package",
+        "deps": [],
+        "description": "Flatpak portal library - non-GUI part"
+    },
+    {
+        "name": "librest-1.0-0",
+        "path": "/librest-1.0-0.package",
+        "deps": [],
+        "description": "REST service access library"
+    },
+    {
+        "name": "libtinysparql-3.0-0",
+        "path": "/libtinysparql-3.0-0.package",
+        "deps": [],
+        "description": "metadata database, indexer and search tool - library"
+    },
+    {
+        "name": "libtotem-plparser-common",
+        "path": "/libtotem-plparser-common.package",
+        "deps": [],
+        "description": "Totem Playlist Parser library - common files"
+    },
+    {
+        "name": "libtotem-plparser18",
+        "path": "/libtotem-plparser18.package",
+        "deps": [
+            "libtotem-plparser-common"
+        ],
+        "description": "Totem Playlist Parser library - runtime files"
+    },
+    {
+        "name": "libunity-protocol-private0",
+        "path": "/libunity-protocol-private0.package",
+        "deps": [
+            "libdee-1.0-4"
+        ],
+        "description": "binding to get places into the launcher - private library"
+    },
+    {
+        "name": "libunity-scopes-json-def-desktop",
+        "path": "/libunity-scopes-json-def-desktop.package",
+        "deps": [],
+        "description": "binding to get places into the launcher - desktop def file"
+    },
+    {
+        "name": "libunity9",
+        "path": "/libunity9.package",
+        "deps": [
+            "libdee-1.0-4",
+            "libunity-protocol-private0",
+            "libunity-scopes-json-def-desktop"
+        ],
+        "description": "binding to get places into the launcher - shared library"
+    },
+    {
+        "name": "libwebkit2gtk-4.1-0",
+        "path": "/libwebkit2gtk-4.1-0.package",
+        "deps": [
+            "libjavascriptcoregtk-4.1-0"
+        ],
+        "description": "Web content engine library for GTK"
+    },
+    {
+        "name": "libwebkitgtk-6.0-4",
+        "path": "/libwebkitgtk-6.0-4.package",
+        "deps": [
+            "libjavascriptcoregtk-6.0-1"
+        ],
+        "description": "Web content engine library for GTK"
+    },
+    {
+        "name": "libwhoopsie-preferences0",
+        "path": "/libwhoopsie-preferences0.package",
+        "deps": [],
+        "description": "Ubuntu error tracker submission settings - shared library"
+    },
+    {
+        "name": "localsearch",
+        "path": "/localsearch.package",
+        "deps": [
+            "libcue2",
+            "libexempi8",
+            "libgexiv2-0.16-4",
+            "libgsf-1-114",
+            "libgxps2t64",
+            "libtinysparql-3.0-0",
+            "libtotem-plparser18",
+            "tinysparql"
+        ],
+        "description": "metadata database, indexer and search tool - metadata extractors"
+    },
+    {
+        "name": "mutter-common-bin",
+        "path": "/mutter-common-bin.package",
+        "deps": [],
+        "description": "shared programs for the Mutter window manager"
+    },
+    {
+        "name": "mutter-common",
+        "path": "/mutter-common.package",
+        "deps": [],
+        "description": "shared files for the Mutter window manager"
+    },
+    {
+        "name": "nautilus-data",
+        "path": "/nautilus-data.package",
+        "deps": [],
+        "description": "data files for nautilus"
+    },
+    {
+        "name": "nautilus",
+        "path": "/nautilus.package",
+        "deps": [
+            "gvfs",
+            "gvfs-backends",
+            "libgexiv2-0.16-4",
+            "libglycin-gtk4-2-0",
+            "libgnome-autoar-0-0",
+            "libgnome-desktop-4-2t64",
+            "libnautilus-extension4",
+            "libportal-gtk4-1",
+            "libportal1",
+            "libtinysparql-3.0-0",
+            "libunity9",
+            "localsearch",
+            "nautilus-data",
+            "xdg-user-dirs-gtk"
+        ],
+        "description": "file manager and graphical shell for GNOME"
+    },
+    {
+        "name": "python3-aptdaemon.gtk3widgets",
+        "path": "/python3-aptdaemon.gtk3widgets.package",
+        "deps": [
+            "aptdaemon-data",
+            "gir1.2-vte-2.91",
+            "python3-aptdaemon"
+        ],
+        "description": "Python 3 GTK+ 3 widgets to run an aptdaemon client"
+    },
+    {
+        "name": "python3-aptdaemon",
+        "path": "/python3-aptdaemon.package",
+        "deps": [
+            "aptdaemon",
+            "python3-defer",
+            "python3-pkg-resources"
+        ],
+        "description": "Python 3 module for the server and client of aptdaemon"
+    },
+    {
+        "name": "python3-autocommand",
+        "path": "/python3-autocommand.package",
+        "deps": [],
+        "description": "library to generate argparse parsers from function signatures"
+    },
+    {
+        "name": "python3-defer",
+        "path": "/python3-defer.package",
+        "deps": [],
+        "description": "Small framework for asynchronous programming (Python 3)"
+    },
+    {
+        "name": "python3-inflect",
+        "path": "/python3-inflect.package",
+        "deps": [
+            "python3-more-itertools",
+            "python3-typeguard"
+        ],
+        "description": "Generate plurals, singular nouns, ordinals, indefinite articles (Python 3)"
+    },
+    {
+        "name": "python3-jaraco.context",
+        "path": "/python3-jaraco.context.package",
+        "deps": [],
+        "description": "jaraco contextlib extensions"
+    },
+    {
+        "name": "python3-jaraco.functools",
+        "path": "/python3-jaraco.functools.package",
+        "deps": [
+            "python3-more-itertools"
+        ],
+        "description": "additional functools in the spirit of stdlib's functools"
+    },
+    {
+        "name": "python3-more-itertools",
+        "path": "/python3-more-itertools.package",
+        "deps": [],
+        "description": "library with routines for operating on iterables, beyond itertools (Python 3)"
+    },
+    {
+        "name": "python3-pkg-resources",
+        "path": "/python3-pkg-resources.package",
+        "deps": [
+            "python3-autocommand",
+            "python3-inflect",
+            "python3-jaraco.context",
+            "python3-jaraco.functools",
+            "python3-more-itertools"
+        ],
+        "description": "Package Discovery and Resource Access using pkg_resources"
+    },
+    {
+        "name": "python3-typeguard",
+        "path": "/python3-typeguard.package",
+        "deps": [],
+        "description": "Run-time type checker for Python"
+    },
+    {
+        "name": "tecla",
+        "path": "/tecla.package",
+        "deps": [],
+        "description": "keyboard layout viewer for the GNOME desktop"
+    },
+    {
+        "name": "tinysparql",
+        "path": "/tinysparql.package",
+        "deps": [
+            "libtinysparql-3.0-0"
+        ],
+        "description": "metadata database, indexer and search tool"
+    },
+    {
+        "name": "ubuntu-advantage-desktop-daemon",
+        "path": "/ubuntu-advantage-desktop-daemon.package",
+        "deps": [],
+        "description": "Daemon to allow access to ubuntu-advantage via D-Bus"
+    },
+    {
+        "name": "ubuntu-desktop-minimal",
+        "path": "/ubuntu-desktop-minimal.package",
+        "deps": [
+            "dmz-cursor-theme",
+            "gdm3",
+            "gnome-control-center",
+            "gnome-menus",
+            "gnome-session-canberra",
+            "gnome-settings-daemon",
+            "gnome-shell",
+            "gnome-shell-ubuntu-extensions",
+            "gstreamer1.0-packagekit",
+            "gstreamer1.0-plugins-base-apps",
+            "language-selector-gnome",
+            "libatk-adaptor",
+            "nautilus",
+            "ubuntu-release-upgrader-gtk",
+            "ubuntu-session",
+            "ubuntu-settings",
+            "update-manager",
+            "update-notifier",
+            "xdg-terminal-exec",
+            "xdg-user-dirs-gtk"
+        ],
+        "description": "Ubuntu desktop minimal system"
+    },
+    {
+        "name": "ubuntu-desktop",
+        "path": "/ubuntu-desktop.package",
+        "deps": [
+            "dmz-cursor-theme",
+            "gdm3",
+            "gnome-control-center",
+            "gnome-menus",
+            "gnome-session-canberra",
+            "gnome-settings-daemon",
+            "gnome-shell",
+            "gnome-shell-ubuntu-extensions",
+            "gstreamer1.0-packagekit",
+            "gstreamer1.0-plugins-base-apps",
+            "language-selector-gnome",
+            "libatk-adaptor",
+            "nautilus",
+            "ubuntu-desktop-minimal",
+            "ubuntu-release-upgrader-gtk",
+            "ubuntu-session",
+            "ubuntu-settings",
+            "update-manager",
+            "update-notifier",
+            "xdg-terminal-exec",
+            "xdg-user-dirs-gtk"
+        ],
+        "description": "Ubuntu desktop system"
+    },
+    {
+        "name": "ubuntu-release-upgrader-gtk",
+        "path": "/ubuntu-release-upgrader-gtk.package",
+        "deps": [
+            "gir1.2-vte-2.91",
+            "gir1.2-webkit2-4.1",
+            "update-manager"
+        ],
+        "description": "manage release upgrades"
+    },
+    {
+        "name": "ubuntu-session",
+        "path": "/ubuntu-session.package",
+        "deps": [
+            "gnome-session-bin",
+            "gnome-session-common",
+            "gnome-settings-daemon",
+            "gnome-shell",
+            "gnome-shell-ubuntu-extensions",
+            "xdg-desktop-portal-gnome",
+            "yaru-theme-gnome-shell"
+        ],
+        "description": "Ubuntu session with GNOME Shell"
+    },
+    {
+        "name": "ubuntu-settings",
+        "path": "/ubuntu-settings.package",
+        "deps": [
+            "gnome-control-center-data"
+        ],
+        "description": "default settings for the Ubuntu desktop"
+    },
+    {
+        "name": "ubuntu-wallpapers-stonking",
+        "path": "/ubuntu-wallpapers-stonking.package",
+        "deps": [],
+        "description": "Ubuntu 26.10 Wallpapers"
+    },
+    {
+        "name": "ubuntu-wallpapers",
+        "path": "/ubuntu-wallpapers.package",
+        "deps": [
+            "ubuntu-wallpapers-stonking"
+        ],
+        "description": "Ubuntu Wallpapers"
+    },
+    {
+        "name": "update-manager",
+        "path": "/update-manager.package",
+        "deps": [
+            "gir1.2-handy-1",
+            "gir1.2-snapd-2",
+            "gnome-shell",
+            "python3-aptdaemon.gtk3widgets",
+            "ubuntu-release-upgrader-gtk",
+            "update-notifier"
+        ],
+        "description": "GNOME application that manages apt updates"
+    },
+    {
+        "name": "update-notifier",
+        "path": "/update-notifier.package",
+        "deps": [
+            "gnome-shell",
+            "ubuntu-advantage-desktop-daemon",
+            "ubuntu-release-upgrader-gtk",
+            "update-manager"
+        ],
+        "description": "Daemon which notifies about package updates"
+    },
+    {
+        "name": "webp-pixbuf-loader",
+        "path": "/webp-pixbuf-loader.package",
+        "deps": [],
+        "description": "WebP Image format GdkPixbuf loader"
+    },
+    {
+        "name": "whoopsie-preferences",
+        "path": "/whoopsie-preferences.package",
+        "deps": [
+            "libwhoopsie-preferences0"
+        ],
+        "description": "System preferences for error reporting"
+    },
+    {
+        "name": "xdg-desktop-portal-gnome",
+        "path": "/xdg-desktop-portal-gnome.package",
+        "deps": [
+            "libgnome-bg-4-2t64",
+            "libgnome-desktop-4-2t64",
+            "nautilus"
+        ],
+        "description": "GNOME portal backend for xdg-desktop-portal"
+    },
+    {
+        "name": "xdg-terminal-exec",
+        "path": "/xdg-terminal-exec.package",
+        "deps": [],
+        "description": "user default terminal execution utility"
+    },
+    {
+        "name": "xdg-user-dirs-gtk",
+        "path": "/xdg-user-dirs-gtk.package",
+        "deps": [],
+        "description": "tool to manage well known user directories (Gtk extension)"
+    },
+    {
+        "name": "yaru-theme-gnome-shell",
+        "path": "/yaru-theme-gnome-shell.package",
+        "deps": [],
+        "description": "Yaru GNOME Shell desktop theme from the Ubuntu Community"
+    },
+    {
+        "name": "libutempter0",
+        "path": "/libutempter0.package",
+        "deps": [],
+        "description": "privileged helper for utmp/wtmp updates (runtime)"
+    },
+    {
+        "name": "xterm",
+        "path": "/xterm.package",
+        "deps": [
+            "libutempter0"
+        ],
+        "description": "X terminal emulator"
     }
 ]
