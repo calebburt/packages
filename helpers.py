@@ -1,4 +1,4 @@
-import sys, os, ctypes
+import sys, os, ctypes, subprocess
 
 match sys.platform:
     case "win32":
