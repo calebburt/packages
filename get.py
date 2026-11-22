@@ -12,6 +12,7 @@ def _resolve_dependencies(
     resolved=None,
     unresolved=None,
 ):
+    print(f"Resolving dependencies for package {package.name}...")
     if resolved is None:
         resolved = []
     if unresolved is None:
@@ -54,10 +55,13 @@ def _resolve_dependencies(
             done.add(current.name)
 
     visit(package)
+    for dep_name in package.deps:
+        print("Found dependency: {}".format(dep_name))
     return resolved
 
 # Install a single package, without dependencies
 def _install(package: Package, system: bool = False):
+    print(f"Installing package {package.name}...")
     install_dir = SYSTEM_INSTALL_DIR if system else USER_INSTALL_DIR
     bin_dir = SYSTEM_BIN_DIR if system else USER_BIN_DIR
     lib_dir = SYSTEM_LIB_DIR if system else USER_LIB_DIR
@@ -97,10 +101,10 @@ def install(package: Package, system: bool = False):
     for pkg in resolved_packages:
         _install(pkg, system)
 
-packs = get_package_list()
-pack = None
-for p in packs:
-    if p.name == "xterm":
-        pack = p
-        break
-install(p, system=False)
+# packs = get_package_list()
+# pack = None
+# for p in packs:
+#     if p.name == "vlc":
+#         pack = p
+#         break
+# install(p, system=False)

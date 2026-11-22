@@ -13,18 +13,18 @@ class Package:
     description: str
 
 def get_package_list():
+    print("Fetching package list...")
     pcks_json = requests.get(urljoin(SERVER, "packages.json")).text
     pcks_dict = json.loads(pcks_json)
     pcks = []
     for pck_dict in pcks_dict:
         pck = Package(pck_dict["name"], urljoin(SERVER, pck_dict["path"]), pck_dict["deps"], pck_dict["description"])
         pcks.append(pck)
+    print("Found {} packages.".format(len(pcks)))
     return pcks
 
 def download_package(package: Package, path: str):
+    print("Downloading {}...".format(package.name))
     with open(path, "wb") as f:
         f.write(requests.get(package.url).content)
 
-packs = get_package_list()
-print(packs)
-download_package(packs[0], "pack.package")

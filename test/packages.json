@@ -1262,5 +1262,34 @@
             "libutempter0"
         ],
         "description": "X terminal emulator"
+    },
+    {
+        "name": "libqt5x11extras5",
+        "path": "/libqt5x11extras5.package",
+        "deps": [],
+        "description": "Qt 5 X11 extras"
+    },
+    {
+        "name": "vlc-bin",
+        "path": "/vlc-bin.package",
+        "deps": [],
+        "description": "binaries from VLC"
+    },
+    {
+        "name": "vlc-plugin-qt",
+        "path": "/vlc-plugin-qt.package",
+        "deps": [
+            "libqt5x11extras5"
+        ],
+        "description": "multimedia player and streamer (Qt plugin)"
+    },
+    {
+        "name": "vlc",
+        "path": "/vlc.package",
+        "deps": [
+            "vlc-bin",
+            "vlc-plugin-qt"
+        ],
+        "description": "multimedia player and streamer"
     }
 ]
