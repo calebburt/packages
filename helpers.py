@@ -2,13 +2,16 @@ import sys, os, ctypes, subprocess
 
 match sys.platform:
     case "win32":
-        USER_INSTALL_DIR = os.path.expanduser("~/AppData/Local/packages/")
+        USER_INSTALL_DIR = os.path.expanduser("~/AppData/Local/Packages/")
         USER_BIN_DIR = os.path.expanduser("~/.bin/")
         USER_LIB_DIR = os.path.expanduser("~/AppData/Local/Packages/lib/")
 
         SYSTEM_INSTALL_DIR = "C:/Program Files/"
         SYSTEM_BIN_DIR = "C:/bin/"
         SYSTEM_LIB_DIR = "C:/Program Files/Packages/lib/"
+
+        USER_DATA_DIR = os.path.expanduser("~/AppData/Local/packages/")
+        SYSTEM_DATA_DIR = "C:/Program Files/packages/"
 
     case "linux":
         USER_INSTALL_DIR = os.path.expanduser("~/.packages/")
@@ -19,6 +22,8 @@ match sys.platform:
         SYSTEM_BIN_DIR = "/usr/local/bin/"
         SYSTEM_LIB_DIR = "/usr/local/lib/packages/"
 
+        USER_DATA_DIR = "~/.local/share/packages/"
+        SYSTEM_DATA_DIR = "/var/lib/packages"
     case "darwin":
         USER_INSTALL_DIR = os.path.expanduser("~/.packages/")
         USER_BIN_DIR = os.path.expanduser("~/.local/bin/")
@@ -28,6 +33,8 @@ match sys.platform:
         SYSTEM_BIN_DIR = "/usr/local/bin/"
         SYSTEM_LIB_DIR = "/usr/local/lib/packages/"
 
+        USER_DATA_DIR = "~/Library/Application Support/packages/"
+        SYSTEM_DATA_DIR = "/Library/Application Support/packages/"
     case _:
         raise NotImplementedError(f"Unknown OS '{sys.platform}'")
 
