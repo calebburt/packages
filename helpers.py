@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, ctypes
 
 match sys.platform:
     case "win32":
